@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project — Kauã Paz</title>
+    <meta
+      name="description"
+      content="Project case study in Kauã Paz's portfolio."
+    />
+    <meta name="theme-color" content="#0F2A44" />
+    <meta name="goatcounter" content="SEUCODIGO" />
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://kauaclairo.github.io/en/project.html" />
+    <link rel="alternate" hreflang="pt-BR" href="https://kauaclairo.github.io/projeto.html" />
+    <link rel="alternate" hreflang="en" href="https://kauaclairo.github.io/en/project.html" />
+    <link rel="alternate" hreflang="x-default" href="https://kauaclairo.github.io/projeto.html" />
+
+    <script>
+      (function () {
+        var root = document.documentElement;
+        root.className = "js";
+        try {
+          var saved = localStorage.getItem("theme");
+          var dark = saved
+            ? saved === "dark"
+            : window.matchMedia("(prefers-color-scheme: dark)").matches;
+          root.setAttribute("data-theme", dark ? "dark" : "light");
+        } catch (error) {
+          root.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
+
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <script src="../assets/js/i18n.js" defer></script>
+    <script src="../assets/js/theme.js" defer></script>
+    <script src="../assets/js/project.js" defer></script>
+    <script src="../assets/js/reveal.js" defer></script>
+    <script src="../assets/js/analytics.js" defer></script>
+    <script src="../assets/js/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <header class="site-header" id="topo">
+      <div class="container site-header__inner">
+        <a class="brand" href="index.html">Kauã Paz</a>
+
+        <div class="header__panel" id="site-nav" data-nav-panel data-open="false">
+          <nav class="site-nav" aria-label="Main">
+            <ul>
+              <li><a href="index.html#projects">Projects</a></li>
+              <li><a href="index.html#about">About</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="lang-switch" aria-label="Language">
+            <a href="../projeto.html" lang="pt-BR">
+              <svg class="flag" viewBox="0 0 24 16" aria-hidden="true" focusable="false">
+                <rect width="24" height="16" fill="#009B3A" />
+                <path d="M12 2.7 21.1 8 12 13.3 2.9 8Z" fill="#FEDF00" />
+                <circle cx="12" cy="8" r="3" fill="#002776" />
+                <path d="M9.3 7.3c1.8-.5 3.7-.4 5.4.3" fill="none" stroke="#fff" stroke-width=".7" />
+              </svg>
+              <span>PT</span>
+            </a>
+            <span class="lang-switch__sep" aria-hidden="true">/</span>
+            <a href="project.html" aria-current="page" lang="en">
+              <svg class="flag" viewBox="0 0 24 16" aria-hidden="true" focusable="false">
+                <rect width="24" height="16" fill="#fff" />
+                <g fill="#B22234">
+                  <rect width="24" height="2.29" />
+                  <rect y="4.57" width="24" height="2.29" />
+                  <rect y="9.14" width="24" height="2.29" />
+                  <rect y="13.72" width="24" height="2.28" />
+                </g>
+                <rect width="10" height="8.6" fill="#3C3B6E" />
+                <g fill="#fff">
+                  <circle cx="2" cy="2" r=".6" /><circle cx="5" cy="2" r=".6" /><circle cx="8" cy="2" r=".6" />
+                  <circle cx="3.5" cy="4.3" r=".6" /><circle cx="6.5" cy="4.3" r=".6" />
+                  <circle cx="2" cy="6.6" r=".6" /><circle cx="5" cy="6.6" r=".6" /><circle cx="8" cy="6.6" r=".6" />
+                </g>
+              </svg>
+              <span>EN</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="header__actions">
+          <button
+            class="theme-toggle"
+            type="button"
+            data-theme-toggle
+            aria-pressed="false"
+            aria-label="Switch to dark theme"
+            title="Switch to dark theme"
+          >
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <circle cx="12" cy="12" r="4.2" />
+              <path
+                d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.2 5.2l1.4 1.4M17.4 17.4l1.4 1.4M18.8 5.2l-1.4 1.4M6.6 17.4l-1.4 1.4"
+              />
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" />
+            </svg>
+            <span class="visually-hidden" data-theme-label>Switch to dark theme</span>
+          </button>
+
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-nav"
+            aria-label="Open menu"
+            data-nav-toggle
+            data-label-open="Open menu"
+            data-label-close="Close menu"
+          ></button>
+        </div>
+      </div>
+    </header>
+
+    <main id="content">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html#projects">← All projects</a>
+        </nav>
+
+        <article
+          class="project"
+          data-project
+          aria-busy="true"
+          data-project-src="../data/projects.json"
+          data-404="../404.html"
+          data-other-page="../projeto.html"
+        >
+          <header class="project-header">
+            <span class="badge-draft" data-project-draft hidden>sample</span>
+            <h1 class="project-header__title" data-project-title>Loading project…</h1>
+            <p class="project-header__summary" data-project-summary></p>
+          </header>
+
+          <aside class="project-aside" aria-label="Project details">
+            <dl class="meta-list">
+              <div>
+                <dt>Role</dt>
+                <dd data-project-role>—</dd>
+              </div>
+              <div>
+                <dt>Period</dt>
+                <dd data-project-period>—</dd>
+              </div>
+              <div>
+                <dt>Stack</dt>
+                <dd data-project-stack>—</dd>
+              </div>
+            </dl>
+          </aside>
+
+          <figure class="project-cover" data-project-cover hidden></figure>
+
+          <div class="prose">
+            <section class="case-block" data-case="challenge" data-reveal="0">
+              <h2>Challenge</h2>
+              <div data-case-body></div>
+            </section>
+
+            <section class="case-block" data-case="approach" data-reveal="1">
+              <h2>Approach</h2>
+              <div data-case-body></div>
+            </section>
+
+            <section class="case-block" data-case="result" data-reveal="2">
+              <h2>Outcome</h2>
+              <div data-case-body></div>
+            </section>
+
+            <section class="case-block" data-case="next" data-reveal="0" hidden>
+              <h2>Next steps</h2>
+              <div data-case-body></div>
+            </section>
+          </div>
+
+          <div class="project-actions" data-project-links data-reveal="0" hidden></div>
+        </article>
+
+        <nav class="project-nav" aria-label="Another project" data-project-nav hidden>
+          <span class="project-nav__label">Next project</span>
+          <a href="index.html#projects" data-project-next>—</a>
+        </nav>
+
+        <noscript>
+          <p class="projects-note">
+            This case study is loaded via JavaScript. See all projects at
+            <a href="https://github.com/kauaclairo" rel="noopener noreferrer"
+              >github.com/kauaclairo</a
+            >.
+          </p>
+        </noscript>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div>
+          <p class="site-footer__name">Kauã Paz</p>
+          <p>Data and artificial intelligence portfolio.</p>
+        </div>
+
+        <nav class="site-footer__nav" aria-label="Footer">
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+
+        <div class="site-footer__meta">
+          <p>© <span data-year>2026</span> Kauã Paz</p>
+          <p>
+            <a href="https://github.com/kauaclairo" rel="noopener noreferrer">GitHub</a>
+            ·
+            <a href="#topo">Back to top ↑</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

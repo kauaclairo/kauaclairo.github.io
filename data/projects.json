@@ -1,0 +1,231 @@
+{
+  "updated": "2026-10-23",
+  "projects": [
+    {
+      "slug": "previsao-demanda",
+      "featured": true,
+      "year": 2025,
+      "period": { "pt": "mar–jun 2025", "en": "Mar–Jun 2025" },
+      "role": { "pt": "Análise e modelagem", "en": "Analysis & modeling" },
+      "title": {
+        "pt": "Previsão de demanda no varejo",
+        "en": "Retail demand forecasting"
+      },
+      "summary": {
+        "pt": "Modelo de série temporal para estimar vendas por loja e apoiar o planejamento de estoque.",
+        "en": "Time-series model to estimate per-store sales and support inventory planning."
+      },
+      "stack": ["Python", "pandas", "scikit-learn", "Power BI"],
+      "image": null,
+      "links": { "repo": null, "demo": null },
+      "case": {
+        "challenge": {
+          "pt": [
+            "O time de compras decidia a reposição semanal com médias históricas simples, o que gerava excesso em lojas sazonais e falta em lojas de alta rotação.",
+            "Não havia registro confiável de promoções passadas, então o modelo precisava ser robusto a picos sem explicação."
+          ],
+          "en": [
+            "The purchasing team planned weekly replenishment from simple historical averages, which caused overstock in seasonal stores and stockouts in high-turnover ones.",
+            "There was no reliable record of past promotions, so the model had to be robust to unexplained spikes."
+          ]
+        },
+        "approach": {
+          "pt": [
+            "Análise exploratória por loja e categoria, com tratamento de feriados e dias sem operação.",
+            "Comparação entre baseline sazonal, Prophet e gradient boosting, avaliada por erro absoluto médio em validação temporal."
+          ],
+          "en": [
+            "Exploratory analysis by store and category, handling holidays and closed days.",
+            "Comparison between a seasonal baseline, Prophet and gradient boosting, evaluated by mean absolute error under time-based validation."
+          ]
+        },
+        "result": {
+          "pt": [
+            "O trabalho ficou documentado em um notebook reproduzível e em um painel de acompanhamento semanal.",
+            "Permanece como estudo: a implantação em produção não foi autorizada pelo time de compras."
+          ],
+          "en": [
+            "The work is documented in a reproducible notebook and a weekly tracking dashboard.",
+            "It remains a study: production rollout was not approved by the purchasing team."
+          ]
+        },
+        "next": {
+          "pt": ["Separar o efeito de campanha do efeito de sazonalidade usando dados de promoção."],
+          "en": ["Separate campaign effects from seasonality using promotion data."]
+        }
+      },
+      "placeholder": true
+    },
+    {
+      "slug": "triagem-tickets",
+      "featured": false,
+      "year": 2024,
+      "period": { "pt": "ago–nov 2024", "en": "Aug–Nov 2024" },
+      "role": { "pt": "Modelagem de NLP", "en": "NLP modeling" },
+      "title": {
+        "pt": "Triagem automática de tickets",
+        "en": "Automated ticket triage"
+      },
+      "summary": {
+        "pt": "Classificador de texto que sugere fila e prioridade para tickets de suporte técnico.",
+        "en": "Text classifier that suggests queue and priority for technical support tickets."
+      },
+      "stack": ["Python", "TF-IDF", "scikit-learn", "FastAPI"],
+      "image": null,
+      "links": { "repo": null, "demo": null },
+      "case": {
+        "challenge": {
+          "pt": [
+            "Os tickets chegavam em uma fila única e eram distribuídos manualmente, o que atrasava casos urgentes.",
+            "Os rótulos históricos eram desbalanceados: poucos exemplos de prioridade alta para treinar."
+          ],
+          "en": [
+            "Tickets arrived in a single queue and were routed by hand, delaying urgent cases.",
+            "Historical labels were imbalanced: very few high-priority examples to train on."
+          ]
+        },
+        "approach": {
+          "pt": [
+            "Limpeza de texto, remoção de ruído de e-mail e vetorização com TF-IDF.",
+            "Regressão logística como baseline interpretável, com pesos de classe para compensar o desbalanceamento.",
+            "API de inferência separada do notebook, para permitir teste com a equipe de suporte."
+          ],
+          "en": [
+            "Text cleaning, email noise removal and TF-IDF vectorization.",
+            "Logistic regression as an interpretable baseline, with class weights to offset imbalance.",
+            "Inference API kept separate from the notebook so the support team could test it."
+          ]
+        },
+        "result": {
+          "pt": [
+            "Protótipo funcional com rótulos explicáveis por termo, o que ajudou a equipe a confiar nas sugestões.",
+            "Não foi adiante por falta de um ambiente de deploy disponível na época."
+          ],
+          "en": [
+            "A working prototype with per-term explanations, which helped the team trust the suggestions.",
+            "It did not move forward for lack of a deployment environment at the time."
+          ]
+        },
+        "next": {
+          "pt": ["Testar um modelo baseado em transformers e comparar com o baseline."],
+          "en": ["Test a transformer-based model and compare it with the baseline."]
+        }
+      },
+      "placeholder": true
+    },
+    {
+      "slug": "painel-churn",
+      "featured": false,
+      "year": 2024,
+      "period": { "pt": "abr–jul 2024", "en": "Apr–Jul 2024" },
+      "role": { "pt": "Análise e visualização", "en": "Analysis & visualization" },
+      "title": {
+        "pt": "Painel de churn",
+        "en": "Churn dashboard"
+      },
+      "summary": {
+        "pt": "Dashboard que acompanha churn mensal, coortes e os motivos de cancelamento mais frequentes.",
+        "en": "Dashboard tracking monthly churn, cohorts and the most frequent cancellation reasons."
+      },
+      "stack": ["SQL", "PostgreSQL", "Power BI"],
+      "image": null,
+      "links": { "repo": null, "demo": null },
+      "case": {
+        "challenge": {
+          "pt": [
+            "Os números de churn eram calculados em planilhas diferentes, com definições divergentes de cliente ativo.",
+            "A liderança precisava de uma leitura única, atualizada mensalmente, sem depender de retrabalho manual."
+          ],
+          "en": [
+            "Churn figures were computed in separate spreadsheets, with conflicting definitions of an active customer.",
+            "Leadership needed a single monthly view without manual rework."
+          ]
+        },
+        "approach": {
+          "pt": [
+            "Definição explícita de cliente ativo e documentação da regra em uma view SQL versionada.",
+            "Modelo dimensional simples (cliente, contrato, mês) para permitir coortes e séries temporais.",
+            "Layout do painel priorizando uma pergunta por página, da visão geral ao detalhe."
+          ],
+          "en": [
+            "Explicit definition of an active customer, documented in a versioned SQL view.",
+            "A simple dimensional model (customer, contract, month) to support cohorts and time series.",
+            "Dashboard layout prioritizing one question per page, from overview to detail."
+          ]
+        },
+        "result": {
+          "pt": [
+            "Uma única definição de churn passou a ser usada nas reuniões mensais.",
+            "O painel foi entregue como projeto de estudo, com consultas versionadas e dicionário de dados."
+          ],
+          "en": [
+            "A single churn definition started being used in monthly meetings.",
+            "Delivered as a study project, with versioned queries and a data dictionary."
+          ]
+        },
+        "next": {
+          "pt": ["Adicionar análise de sobrevivência para estimar tempo até o cancelamento."],
+          "en": ["Add survival analysis to estimate time to cancellation."]
+        }
+      },
+      "placeholder": true
+    },
+    {
+      "slug": "pipeline-vendas",
+      "featured": false,
+      "year": 2023,
+      "period": { "pt": "set–dez 2023", "en": "Sep–Dec 2023" },
+      "role": { "pt": "Engenharia de dados", "en": "Data engineering" },
+      "title": {
+        "pt": "Pipeline de dados de vendas",
+        "en": "Sales data pipeline"
+      },
+      "summary": {
+        "pt": "Ingestão e transformação diária de arquivos de vendas em um armazém consultável.",
+        "en": "Daily ingestion and transformation of sales files into a queryable warehouse."
+      },
+      "stack": ["Python", "Airflow", "PostgreSQL", "Docker"],
+      "image": null,
+      "links": { "repo": null, "demo": null },
+      "case": {
+        "challenge": {
+          "pt": [
+            "Arquivos de vendas chegavam por e-mail em formatos ligeiramente diferentes a cada mês.",
+            "Qualquer falha de carga era descoberta só no fechamento, quando o número já tinha sido reportado."
+          ],
+          "en": [
+            "Sales files arrived by email in slightly different formats each month.",
+            "Any load failure was only discovered at month close, after the number had been reported."
+          ]
+        },
+        "approach": {
+          "pt": [
+            "DAGs idempotentes por data de referência, com validação de esquema antes de gravar.",
+            "Camadas raw e trusted no banco, para preservar o original e permitir reprocessamento.",
+            "Testes de contrato nos campos obrigatórios e alerta em caso de contagem fora do esperado."
+          ],
+          "en": [
+            "Idempotent DAGs keyed by reference date, with schema validation before writing.",
+            "Raw and trusted layers in the database, preserving the original and allowing reprocessing.",
+            "Contract tests on required fields plus alerts for unexpected row counts."
+          ]
+        },
+        "result": {
+          "pt": [
+            "O ambiente sobe completo com Docker Compose e reprocessa qualquer mês a partir do arquivo original.",
+            "Projeto de estudo, sem dados reais de empresa."
+          ],
+          "en": [
+            "The whole environment starts with Docker Compose and reprocesses any month from the original file.",
+            "Study project, with no real company data."
+          ]
+        },
+        "next": {
+          "pt": ["Migrar as transformações para dbt e documentar a linhagem dos campos."],
+          "en": ["Migrate transformations to dbt and document field lineage."]
+        }
+      },
+      "placeholder": true
+    }
+  ]
+}
