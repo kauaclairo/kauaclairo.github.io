@@ -1,7 +1,7 @@
 # kauaclairo.github.io
 
 Portfólio pessoal de **Kauã Paz** — dados e inteligência artificial.
-Site estático, sem build, publicado no GitHub Pages.
+Site estático, sem build, publicado no GitHub Pages: <https://kauaclairo.github.io>.
 
 ## Rodar localmente
 

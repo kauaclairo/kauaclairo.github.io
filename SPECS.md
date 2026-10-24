@@ -305,12 +305,15 @@ Sem `package.json`, sem `node_modules`, sem `.github/workflows` na v1 (deploy na
 | M2.1 | Tema claro/escuro | Ambos com contraste AA, sem flash, escolha persistida | ✅ 2026-10-23 |
 | M3 | Template de projeto + 4 estudos de caso | Slug inválido cai em 404; metadados dinâmicos | ✅ 2026-10-23 |
 | M4 | Movimento, analytics, 404, robôs | Reduced-motion ok; nenhum erro de console | ✅ 2026-10-23 |
-| M5 | Revisão de acessibilidade e performance, deploy | Lighthouse ≥ 95 nas 4 categorias, mobile | 🟡 pronto para publicar |
+| M5 | Revisão de acessibilidade e performance, deploy | Lighthouse ≥ 95 nas 4 categorias, mobile | ✅ 2026-10-23 (publicado) |
 
 Revisão local: os cards são carregados por `fetch`, então é preciso servir por HTTP
 (`python -m http.server 8000` na raiz). Abrir `index.html` direto do disco bloqueia o JSON.
 
-## 16. Pendências de conteúdo (bloqueiam o deploy, não o planejamento)
+## 16. Pendências de conteúdo (bloqueiam a divulgação, não o deploy)
+
+> Decisão de 2026-10-23: o site foi publicado como prévia a pedido do autor. Os 4 casos continuam
+> marcados como exemplo e as páginas de projeto saem com `noindex` até `placeholder: false`.
 
 - [ ] Bio real (3 parágrafos) em PT e EN.
 - [ ] Confirmar e-mail profissional e URL do LinkedIn.
